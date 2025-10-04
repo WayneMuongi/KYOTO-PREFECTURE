@@ -1,18 +1,32 @@
 // src/pages/Signup.jsx
-import React from "react";
+import React, { useState } from "react";
+import "./Signup.css";
 
 export default function Signup() {
+  const [hovered, setHovered] = useState(false);
+
   return (
-    <div style={{ textAlign: "center", marginTop: "100px" }}>
-      <h1>Sign Up to Explore Kyoto</h1>
-      <p>Join us to discover the beauty, history, and culture of Kyoto Prefecture.</p>
-      
-      <form style={{ marginTop: "20px" }}>
-        <input type="text" placeholder="Full Name" style={{ padding: "10px", margin: "5px" }} /><br />
-        <input type="email" placeholder="Email Address" style={{ padding: "10px", margin: "5px" }} /><br />
-        <input type="password" placeholder="Password" style={{ padding: "10px", margin: "5px" }} /><br />
-        <button type="submit" style={{ padding: "10px 20px", marginTop: "10px" }}>Sign Up</button>
-      </form>
+    <div className="signup-container">
+      <div className="overlay">
+        <div className="signup-card">
+          <h1>Sign Up to Explore Kyoto</h1>
+          <p>Join us to discover the beauty, history, and culture of Kyoto Prefecture.</p>
+
+          <form className="signup-form">
+            <input type="text" placeholder="Full Name" />
+            <input type="email" placeholder="Email Address" />
+            <input type="password" placeholder="Password" />
+            <button
+              type="submit"
+              onMouseEnter={() => setHovered(true)}
+              onMouseLeave={() => setHovered(false)}
+              className={hovered ? "hovered" : ""}
+            >
+              {hovered ? "✨ Let’s Go! ✨" : "Sign Up"}
+            </button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

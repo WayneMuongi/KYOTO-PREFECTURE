@@ -1,0 +1,103 @@
+/* src/pages/Signup.css */
+
+.signup-container {
+  background-image: url("https://images.unsplash.com/photo-1549692520-acc6669e2f0c");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 40px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 1.2s ease;
+}
+
+.signup-card h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.signup-card p {
+  font-size: 1rem;
+  margin-bottom: 30px;
+  color: #f0eaea;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.signup-form input:focus {
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: scale(1.05);
+}
+
+.signup-form button {
+  background-color: #b33e3e;
+  border: none;
+  color: white;
+  padding: 12px 25px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin-top: 15px;
+}
+
+.signup-form button.hovered {
+  background-color: #d14f4f;
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(255, 200, 200, 0.6);
+}
+
+.signup-form button:hover {
+  background-color: #c04848;
+}
+
+/* ✨ Simple fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Mobile friendly */
+@media (max-width: 500px) {
+  .signup-card {
+    padding: 25px;
+  }
+}
